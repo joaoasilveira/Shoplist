@@ -1,0 +1,25 @@
+.title {
+  font-size: var(--text-lg);
+  line-height: 32px;
+  font-weight: bold;
+  color: var(--content-primary);
+}
+
+.label {
+  font-size: var(--text-md);
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: var(--text-md);
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.link {
+  font-size: var(--text-sm);
+  line-height: 16px;
+  font-weight: normal;
+  color: var(--color-brand);
+}

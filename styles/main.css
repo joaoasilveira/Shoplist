@@ -1,0 +1,154 @@
+body {
+  background-color: var(--background-primary);
+  margin-inline: 370px;
+  margin-top: 25px;
+
+  @media (width <= 376px) {
+    margin-inline: 32px;
+  }
+  & #logo {
+    display: block;
+    margin-inline: auto;
+  }
+  & .back {
+    margin-top: 62px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+
+    @media (width <= 376px) {
+      margin-top: 16px;
+      margin-bottom: 4px;
+    }
+  }
+
+  & form {
+    margin-top: 44px;
+    display: flex;
+    gap: 16px;
+
+    @media (width <= 376px) {
+      gap: 8px;
+      margin-top: 16px;
+      flex-direction: column;
+    }
+
+    & input {
+      height: 44px;
+      padding: 0px 18px;
+      background: var(--background-secondary);
+      border: 2px solid #D1D5DB;
+      border-radius: 12px;
+  
+      @media (width > 376px) {
+        flex: 1;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: var(--color-brand);
+      }
+    }
+
+    & button {
+      height: 44px;
+      padding: 10px 24px;
+      background: var(--color-brand);
+      border-radius: 12px;
+      color: white;
+      border: none;
+  
+      &:hover {
+        cursor: pointer;
+        background: var(--color-brand-hover)
+      }
+    }
+  }
+
+  & ul {
+    list-style-type: none;
+    margin-top: 40px;
+  
+    overflow-y: scroll;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (width <= 376px) {
+      margin-top: 24px;
+    }
+
+    & li {
+      height: 49px;
+      padding: 8px 12px;
+      background: var(--background-secondary);
+      border-radius: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      & #listItem {
+        width: 18px;
+        height: 18px;
+        appearance: none;
+        background: #FFFFFF;
+        border: 1px solid #D1D5DB;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &:hover {
+          border: 1px solid #B9C2D0;
+        }
+        &:checked {
+          background: #CA3884;
+          border: 1px solid #CA3884;
+        }
+        &:checked::before {
+          content: '✔'; /* Marca de seleção */
+          color: white; /* Cor da marca */
+          display: flex;
+          justify-content: center;
+        }
+      }
+      
+      & button {
+        cursor: pointer;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-secondary);
+        border: none;
+
+        & img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+      
+    }
+  }
+
+  & .alert {
+    height: 44px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    color: var(--always-white);
+    background: var(--color-danger);
+    border-radius: 12px;
+
+    & svg.close{
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+}
