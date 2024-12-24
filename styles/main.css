@@ -145,10 +145,16 @@ body {
     color: var(--always-white);
     background: var(--color-danger);
     border-radius: 12px;
-
-    & svg.close{
-      cursor: pointer;
-      margin-left: auto;
-    }
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
+  }
+  
+  & .alert.visible {
+    opacity: 1; /* Torna o alerta visível */
+  }
+  
+  & .alert svg.close {
+    cursor: pointer;
+    margin-left: auto;
   }
 }
